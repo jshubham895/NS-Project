@@ -13,7 +13,7 @@ var ciphertext = CryptoJS.AES.encrypt(base64str, secretKey).toString();
 
 console.log("Encrypting...");
 
-fs.writeFileSync("encrypt.txt", ciphertext, "utf-8");
+fs.writeFileSync("encrypt", ciphertext, "utf-8");
 
 console.log("File Encrypted Successfully.");
 console.log("Keep the secret key in order to decrypt the file.");
