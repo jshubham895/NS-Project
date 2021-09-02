@@ -1,4 +1,4 @@
-// Input - img txt key
+// Input - [tesla.jpg] [key.text]
 
 const fs = require("fs");
 const CryptoJS = require("crypto-js");

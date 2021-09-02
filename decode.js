@@ -1,4 +1,4 @@
-// output txt img key
+// output [out.jpg] [key.txt]
 
 const fs = require("fs");
 const CryptoJS = require("crypto-js");
