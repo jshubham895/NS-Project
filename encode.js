@@ -1,7 +1,13 @@
+// Input - img txt key
+
 const fs = require("fs");
+const CryptoJS = require("crypto-js");
 
-const base64 = fs.readFileSync(process.argv[2], "base64");
+const secretKey = fs.readFileSync(process.argv[4], "utf-8");
 
-const buffer = Buffer.from(base64, "base64");
+const base64str = fs.readFileSync(process.argv[2], "base64");
+var ciphertext = CryptoJS.AES.encrypt(base64str, secretKey).toString();
 
-fs.writeFileSync(process.argv[3], buffer);
+fs.writeFileSync(process.argv[3], ciphertext, "utf-8");
+
+console.log("File Encrypted Successfully");
